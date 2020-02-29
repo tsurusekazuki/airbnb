@@ -36,17 +36,9 @@ const styles = StyleSheet.create<Style>({
   },
 });
 
-const RoundedButton: React.FC<Props> = ({
-  text,
-  color,
-  backgroundColor,
-  handleOnPress,
-}) => {
+const RoundedButton: React.FC<Props> = ({ text, color, backgroundColor }) => {
   return (
-    <TouchableHighlight
-      style={[{ backgroundColor }, styles.wrapper]}
-      onPress={handleOnPress}
-    >
+    <TouchableHighlight style={[{ backgroundColor }, styles.wrapper]}>
       <Text style={[{ color }, styles.buttonText]}>{text}</Text>
     </TouchableHighlight>
   );
